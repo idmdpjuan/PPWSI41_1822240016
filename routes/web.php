@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Juan1822240016Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/juan1822240016/insert', [Juan1822240016Controller::class, 'insert']);
+Route::get('/juan1822240016/update', [Juan1822240016Controller::class, 'update']);
+Route::get('/juan1822240016/delete', [Juan1822240016Controller::class, 'delete']);
+Route::get('/juan1822240016/select', [Juan1822240016Controller::class, 'select']);
+
+Route::get('/juan1822240016/insert-qb', [Juan1822240016Controller::class, 'insertQb']);
+Route::get('/juan1822240016/update-qb', [Juan1822240016Controller::class, 'updateQb']);
+Route::get('/juan1822240016/delete-qb', [Juan1822240016Controller::class, 'deleteQb']);
+Route::get('/juan1822240016/select-qb', [Juan1822240016Controller::class, 'selectQb']);
+
+Route::get('/juan1822240016/insert-elq', [Juan1822240016Controller::class, 'insertElq']);
+Route::get('/juan1822240016/update-elq', [Juan1822240016Controller::class, 'updateElq']);
+Route::get('/juan1822240016/delete-elq', [Juan1822240016Controller::class, 'deleteElq']);
+Route::get('/juan1822240016/select-elq', [Juan1822240016Controller::class, 'selectElq']);
