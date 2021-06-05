@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Juan1822240016Controller;
+use App\Http\Controllers\ProdiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +33,9 @@ Route::get('/juan1822240016/insert-elq', [Juan1822240016Controller::class, 'inse
 Route::get('/juan1822240016/update-elq', [Juan1822240016Controller::class, 'updateElq']);
 Route::get('/juan1822240016/delete-elq', [Juan1822240016Controller::class, 'deleteElq']);
 Route::get('/juan1822240016/select-elq', [Juan1822240016Controller::class, 'selectElq']);
+
+Route::get('/prodi/create', [ProdiController::class, 'create']);
+Route::get('/prodi/store', [ProdiController::class, 'store']);
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
